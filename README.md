@@ -52,3 +52,14 @@ Não consegui terminar a implementação dentro do tempo limite. A ideia era:
 -Se ainda empatar, manter a ordem original da lista.
 
 Portanto, o código está parcialmente pronto, mas a linha de raciocínio está correta.
+
+EX GYS
+
+Minha Resolução:
+
+- Acessei os dados do input JSON, incluindo coordenadas, usando objetos aninhados (`input.GEOLOCALIZACAO.coordinates[0]` e `[1]`).  
+- Convertemos as coordenadas de string para número usando `parseFloat()`.  
+- Inverti a ordem das coordenadas `[latitude, longitude]` para `[longitude, latitude]` conforme exige o padrão GeoJSON.  
+- Gerei um `UUID` único para cada registro usando `randomUUID()` para identificação interna.  
+- Garanti que todos os campos obrigatórios estivessem preenchidos, usando valores padrão (`[]` ou `{}`) quando o input estava vazio (`||`).  
+- Construí o objeto final GeoJSON com `type: "Feature"`, `properties` e `geometry`, respeitando o formato solicitado.  
