@@ -48,7 +48,7 @@
 **Minha Resolução:**  
 
 - Acessei os dados do input JSON, incluindo coordenadas, usando objetos aninhados (`input.GEOLOCALIZACAO.coordinates[0]` e `[1]`)  
-- Convertemos as coordenadas de string para número usando `parseFloat()`  
+- Converti as coordenadas de string para número usando `parseFloat()`  
 - Inverti a ordem das coordenadas `[latitude, longitude]` para `[longitude, latitude]` conforme exige o padrão GeoJSON  
 - Gerei um `UUID` único para cada registro usando `randomUUID()` para identificação interna  
 - Garanti que todos os campos obrigatórios estivessem preenchidos, usando valores padrão (`[]` ou `{}`) quando o input estava vazio (`||`)  
